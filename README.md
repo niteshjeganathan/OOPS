@@ -80,6 +80,20 @@ int main()
 ## Constructors
 A special method to instantiate an object and "construct" it. It is called automatically called when an object is created, in some cases to set intial values to its attributes. The name of the constructor is the same as the name of the class. 
 
+```c++
+Animal(string n, int l) //Parameterised Constructor
+    {
+        name = n;
+        legs = l;
+    }
+
+    Animal() //Default Constructor
+    {
+        name = "Animal";
+        legs = 4;
+    }
+```
+
 ## Destructors
 A special method to "destruct" an object. It is automatically called when an object is destroyed, or when it goes out of scope. Its major functionality is cleanup, releasing resources, and prevent resource leaks. It takes no parameters and the name of the destructor is the same as the name of the class. 
 
