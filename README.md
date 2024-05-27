@@ -23,7 +23,7 @@ Allows to inherit properties and methods from other classes. Can create speciali
 
 
 ## Polymorphism 
-morphism means to change, and poly means many. Polymorphism is when an entity behaves like another entity. 
+Morphism means to change, and poly means many. Polymorphism is when an entity behaves like another entity. 
 
 > Example: An animal class could be inherited by a Dog class and a Cat class. The same method sound() in animal class, "makes a sound". But in dog class, "barks" and in cat class, "meows".
 
