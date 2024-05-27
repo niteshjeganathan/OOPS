@@ -40,23 +40,23 @@ using namespace std;
 
 class Animal
 {
-private:
-    string name;
+private: //private Access Modifier
+    string name; //Attributes
     int legs;
 
 public:
-    Animal(string n, int l)
+    Animal(string n, int l) //Constructor
     {
         name = n;
         legs = l;
     }
 
-    ~Animal()
+    ~Animal() //Destructor
     {
         ;
     }
 
-    void makeSound()
+    void makeSound() //Method
     {
         cout << "Animal making sounds..." << endl;
     }
