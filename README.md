@@ -99,10 +99,10 @@ A special method to "destruct" an object. It is automatically called when an obj
 
 ```c++
 ~Animal()
-    {
-        cout << "Object has been destroyed or out of scope..." << endl; 
-        //Do Cleanup, release resources, prevent resource leaks.
-    }
+{
+    cout << "Object has been destroyed or out of scope..." << endl; 
+    //Do Cleanup, release resources, prevent resource leaks.
+}
 ```
 
 ## Access Modifiers
@@ -116,6 +116,27 @@ It sets the accessibility or visibility of the member data and methods. The diff
 It enables multiple methods to have the same name but different parameters(no of parameters, or type of parameters, or both). It is a type of **static polymorphism**. Additionally, operators can also be overloaded to redifine the behaviour of certain operators for user-defined types(classes). It is just syntactic sugar, and can be achieved through functions as well. But it makes the code more intuitive and user-friendly. The type of overloading are: 
 - Function Overloading
 - Operator Overloading
+
+1. Function Overloading
+```c++
+void makeSound()
+{
+    cout << "Animal making sounds..." << endl;
+}
+
+void makeSound(string sound)
+{
+    cout << "Animal is " + sound << endl;
+}
+```
+```c++
+int main()
+{
+    Animal animal1 = Animal("dog", 4);
+    animal1.makeSound();
+    animal1.makeSound("barking");
+}
+```
   
 
 
