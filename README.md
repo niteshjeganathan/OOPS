@@ -321,6 +321,23 @@ int main() {
     cout << Math::add(4, 5) << endl;
 }
 ```
+## Inline Functions
+It is a suggestion to the compiler to insert the function's body wherever the function is being called, rather than the usual function call. It reduces overhead. But it is upto the compiler to make it an inline function or not. 
+```c++
+#include <iostream>
+using namespace std;
+
+class Math {
+public: 
+    inline static int add(int a, int b) {
+        return a + b;
+    }
+};
+
+int main() {
+    cout << Math::add(4, 5) << endl;
+}
+```
 
 
 
