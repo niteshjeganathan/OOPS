@@ -205,7 +205,8 @@ public:
 class Dog : public Animal
 {
 public:
-    void makeSound() override //Override keyword makes sure compiler knows it's supposed to override, it will throw error if virtual is missing or if its a new function 
+    void makeSound() override //Override keyword makes sure compiler knows it's
+//supposed to override, it will throw error if virtual is missing or if its a new function 
     {
         cout << "Animal barks... " << endl;
     }
