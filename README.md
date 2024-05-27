@@ -282,7 +282,7 @@ int main() {
 ```
 
 ## Static
-1. Static Member Data
+1. **Static Member Data**
 It is also called as a class variable. It is propery of a class, rather than an object. This member data, remains constant throughout the objects that have been created using this class.
 ```c++
 #include <iostream>
@@ -304,7 +304,7 @@ int main() {
 }
 ```
 
-2. Static Member Functions in Classes
+2. **Static Member Functions in Classes**
 It can be called without creating an object, using just the class. It only operates on static member data, or other static member methods. It is also used for implementing common functionalities.
 ```c++
 #include <iostream>
