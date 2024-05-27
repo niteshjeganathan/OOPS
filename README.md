@@ -97,6 +97,14 @@ Animal() //Default Constructor
 ## Destructors
 A special method to "destruct" an object. It is automatically called when an object is destroyed, or when it goes out of scope. Its major functionality is cleanup, releasing resources, and prevent resource leaks. It takes no parameters and the name of the destructor is the same as the name of the class. 
 
+```c++
+~Animal()
+    {
+        cout << "Object has been destroyed or out of scope..." << endl; 
+        //Do Cleanup, release resources, prevent resource leaks.
+    }
+```
+
 ## Access Modifiers
 It sets the accessibility or visibility of the member data and methods. The different types of access modifiers are: 
 - Public: Can be accessed from outside the class. Inherited classes can also access this.
