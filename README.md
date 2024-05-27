@@ -123,9 +123,7 @@ Polymorphism is when an entity behaves like another entity. Objects can be proce
 2. Dynamic Polymorphism: The method to be called is determined at run-time based on the actual object type. It allows a subclass to provide a specific implementation of a method that is already defind the superclass, through method overriding.
 > Example: An animal class could have a function sound(), which "makes a sound". A dog class which inherits the animal class, could give the same method a different implementation, "barks".
 
-   
-
-## Overloading
+## Overloading (Static Polymorphism)
 It enables multiple methods to have the same name but different parameters(no of parameters, or type of parameters, or both). It is a type of **static polymorphism**. Additionally, operators can also be overloaded to redifine the behaviour of certain operators for user-defined types(classes). It is just syntactic sugar, and can be achieved through functions as well. But it makes the code more intuitive and user-friendly. The type of overloading are: 
 - Function Overloading
 - Operator Overloading
@@ -187,7 +185,39 @@ int main()
     n1 = n1 + n2;
 }
 ```
-  
+
+## Dyanmic Binding (Dynamic Polymorphism)
+Also called as late binding, or run-time binding. The method of a particular object is resolved rather at run-time than compile-time. This allows the selection of the appropriate method implementation based on the actual type of the object being referenced, rather than the type of the reference itself. 
+
+```c++
+#include <iostream>
+using namespace std;
+
+class Animal
+{
+public:
+    virtual void makeSound() //Allows the Child to give its own implementation
+    {
+        cout << "Animal makes a sound... " << endl;
+    }
+};
+
+class Dog : public Animal
+{
+public:
+    void makeSound() override //Override keyword makes sure compiler knows it's supposed to override, it will throw error if virtual is missing or if its a new function 
+    {
+        cout << "Animal barks... " << endl;
+    }
+};
+
+int main() {
+    Animal* animal = new Animal();
+    Animal* dog = new Dog(); //Dunamic Binding
+    
+    dog -> makeSound();
+}
+```
 
 
 
