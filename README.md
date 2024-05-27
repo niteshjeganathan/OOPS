@@ -34,7 +34,7 @@ Class is a blueprint or a template to create objects. A class defines its proper
 - Destructor: A specialised method to "destruct" an object
 - Access Modifiers: Used to control the accessibility of class members
 
-'''
+```c++
 #include <iostream>
 using namespace std;
 
@@ -50,7 +50,7 @@ public:
         cout << "Animal making sounds..." << endl;
     }
 };
-'''
+```
 
 ## Object
 An instance of a class. Fundamental building blocks of OOP. The key components are: 
