@@ -281,6 +281,47 @@ int main() {
 }
 ```
 
+## Static
+1. Static Member Variables
+It is also called as a class variable. It is propery of a class, rather than an object. This member data, remains constant throughout the objects that have been created using this class.
+```c++
+#include <iostream>
+using namespace std;
+
+class Car {
+public: 
+    static int noOfCars;
+    Car() {
+        noOfCars++;
+    }
+};
+
+int Car::noOfCars = 0;
+
+int main() {
+    Car car1 = Car();
+    cout << Car::noOfCars;
+}
+```
+
+2. Static Member Functions in Classes
+It can be called without creating an object, using just the class. It only operates on static member data, or other static member methods. It is also used for implementing common functionalities.
+```c++
+#include <iostream>
+using namespace std;
+
+class Math {
+public: 
+    static int add(int a, int b) {
+        return a + b;
+    }
+};
+
+int main() {
+    cout << Math::add(4, 5) << endl;
+}
+```
+
 
 
 
