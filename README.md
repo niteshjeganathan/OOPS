@@ -112,6 +112,19 @@ It sets the accessibility or visibility of the member data and methods. The diff
 - Protected: Can't be accessed from outside the class. But inherited classes can access this.
 - Default: In C++ and Java, by default they are set to private.
 
+## Polymorphism
+Polymorphism is when an entity behaves like another entity. Objects can be processed without the need to know the specific class types at compile type. All the different types of objects can be treated as one common superclass. There are two types:
+- Compile-Time Polymorphism (Static Polymorphism)
+- Run-Time Polymorphism (Dynamic Polymorphism)
+
+1. Static Polymorphism: The compiler determines which implementation of a method to use based on the signature of the method at compilation.
+> Example: Function Overloading and Method Overloading
+
+2. Dynamic Polymorphism: The method to be called is determined at run-time based on the actual object type. It allows a subclass to provide a specific implementation of a method that is already defind the superclass, through method overriding.
+> Example: An animal class could have a function sound(), which "makes a sound". A dog class which inherits the animal class, could give the same method a different implementation, "barks".
+
+   
+
 ## Overloading
 It enables multiple methods to have the same name but different parameters(no of parameters, or type of parameters, or both). It is a type of **static polymorphism**. Additionally, operators can also be overloaded to redifine the behaviour of certain operators for user-defined types(classes). It is just syntactic sugar, and can be achieved through functions as well. But it makes the code more intuitive and user-friendly. The type of overloading are: 
 - Function Overloading
