@@ -220,6 +220,36 @@ int main() {
 }
 ```
 
+## Virtual Functions
+Enables polymorphism by allowing a child class to provide a different implementation to a method in the superclass by overriding it. This allows for dynamic binding, where the method call is resolved at run-time based on the actual type of the object, rather than the type of the reference. Pure virtual function forces the child class to implement a method given in the superclass. 
+
+```c++
+#include <iostream>
+using namespace std;
+
+class Animal
+{
+public:
+    virtual void makeSound() = 0;//Forces the Child to give its own implementation
+};
+
+class Dog : public Animal
+{
+public:
+    void makeSound() override //Override keyword makes sure compiler knows it's supposed to override, it will throw error if virtual is missing or if its a new function 
+    {
+        cout << "Animal barks... " << endl;
+    }
+};
+
+int main() {
+    Animal* dog = new Dog(); //Dunamic Binding
+    
+    dog -> makeSound();
+}
+```
+
+
 
 
 
