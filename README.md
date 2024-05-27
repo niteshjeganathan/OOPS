@@ -1,4 +1,5 @@
 
+
 # Object Oriented Programming
 ## OOP
 Revolves around the idea of creating objects that encapsulate data and behaviour. Objects interact with data/other objects through methods. There are 4 principles of OOP: 
@@ -395,7 +396,8 @@ public:
     }
     
     void announce(Person person) {
-        cout << person.name << " took the subject: " << name << endl; //class has access to the private member data of the other class, not possible through inheritance
+        cout << person.name << " took the subject: " << name << endl; //class has access to the private member data of
+//the other class, not possible through inheritance
     }
 };
 
