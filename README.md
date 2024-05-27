@@ -250,6 +250,37 @@ int main() {
 }
 ```
 
+## Abstract Classes
+A class which is purely a template for subclasses. It can't be intantiated. It is an incomplete class, since it has atleast one or more pure virtual functions. It provides a common interface, making sure all the subclasses implement a set of common functions. 
+
+```c++
+#include <iostream>
+using namespace std;
+
+class Animal //Abstract Class
+{
+public:
+    virtual void makeSound() = 0;//Forces the Child to give its own implementation
+};
+
+class Dog : public Animal
+{
+public:
+    void makeSound() override //Override keyword makes sure compiler knows it's supposed to override,
+//it will throw error if virtual is missing or if its a new function 
+    {
+        cout << "Animal barks... " << endl;
+    }
+};
+
+int main() {
+    //Animal* animal = new Animal() will throw error since abstract classes cant be instantiated
+    Animal* dog = new Dog(); //Dunamic Binding
+    
+    dog -> makeSound();
+}
+```
+
 
 
 
