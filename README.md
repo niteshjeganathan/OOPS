@@ -114,6 +114,42 @@ It sets the accessibility or visibility of the member data and methods. The diff
 - Protected: Can't be accessed from outside the class. But inherited classes can access this.
 - Default: In C++ and Java, by default they are set to private.
 
+## Inheritance 
+It allows one class to inherit the attributes and functions of another class. It promotes code reusability. 
+```c++
+#include <iostream>
+using namespace std;
+
+class Animal {
+private:
+    string name;
+public: 
+    Animal(string n) {
+        name = n;
+    }
+    void makeSound() {
+        cout << "Animal making sound... " << endl;
+    }
+};
+
+class Dog : public Animal{ //Inheritance
+private:
+    string breed;
+public: 
+    Dog(string n, string s) : Animal(n) { //Subclass Constructor calling Superclass Constructor
+        breed = s;
+    }
+};
+
+int main() {
+    Animal animal = Animal("Cat");
+    animal.makeSound();
+    
+    Dog dog = Dog("Tommy", "Labrador");
+    dog.makeSound();
+}
+```
+
 ## Polymorphism
 Polymorphism is when an entity behaves like another entity. Objects can be processed without the need to know the specific class types at compile type. All the different types of objects can be treated as one common superclass. There are two types:
 - Compile-Time Polymorphism (Static Polymorphism)
