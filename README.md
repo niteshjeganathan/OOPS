@@ -82,16 +82,16 @@ A special method to instantiate an object and "construct" it. It is called autom
 
 ```c++
 Animal(string n, int l) //Parameterised Constructor
-    {
-        name = n;
-        legs = l;
-    }
+{
+    name = n;
+    legs = l;
+}
 
-    Animal() //Default Constructor
-    {
-        name = "Animal";
-        legs = 4;
-    }
+Animal() //Default Constructor
+{
+    name = "Animal";
+    legs = 4;
+}
 ```
 
 ## Destructors
