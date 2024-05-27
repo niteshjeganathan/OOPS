@@ -186,7 +186,7 @@ int main()
 }
 ```
 
-## Dyanmic Binding (Dynamic Polymorphism)
+## Dynamic Binding (Dynamic Polymorphism)
 Also called as late binding, or run-time binding. The method of a particular object is resolved rather at run-time than compile-time. This allows the selection of the appropriate method implementation based on the actual type of the object being referenced, rather than the type of the reference itself. 
 
 ```c++
