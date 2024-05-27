@@ -69,6 +69,14 @@ An instance of a class. Fundamental building blocks of OOP. The key components a
 - Methods(Functions): Behaviour
 - Identity: Name/Address of the object that distinguishes objects
 
+```c++
+int main()
+{
+    Animal animal1 = Animal("dog", 4);
+    animal1.makeSound();
+}
+```
+
 ## Constructors
 A special method to instantiate an object and "construct" it. It is called automatically called when an object is created, in some cases to set intial values to its attributes. The name of the constructor is the same as the name of the class. 
 
