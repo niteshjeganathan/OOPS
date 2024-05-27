@@ -345,7 +345,6 @@ int main() {
 It is used to grant a function or another class access to the private and protected parts of the class. Useful when functions or classes need to collaberate with each other, but still maintaining privacy to certain parts when required. 
 
 1. Friend Functions
-When an outside function is granted access to the private and protected parts of a class.
 ```c++
 #include <iostream>
 using namespace std;
