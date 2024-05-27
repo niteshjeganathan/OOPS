@@ -34,6 +34,24 @@ Class is a blueprint or a template to create objects. A class defines its proper
 - Destructor: A specialised method to "destruct" an object
 - Access Modifiers: Used to control the accessibility of class members
 
+'''C++
+#include <iostream>
+using namespace std;
+
+class Animal
+{
+private:
+    string name;
+    int legs;
+
+public:
+    void makeSound()
+    {
+        cout << "Animal making sounds..." << endl;
+    }
+};
+'''
+
 ## Object
 An instance of a class. Fundamental building blocks of OOP. The key components are: 
 - State: Attributes
@@ -46,6 +64,18 @@ A special method to instantiate an object and "construct" it. It is called autom
 ## Destructors
 A special method to "destruct" an object. It is automatically called when an object is destroyed, or when it goes out of scope. Its major functionality is cleanup, releasing resources, and prevent resource leaks. It takes no parameters and the name of the destructor is the same as the name of the class. 
 
+## Access Modifiers
+It sets the accessibility or visibility of the member data and methods. The different types of access modifiers are: 
+- Public: Can be accessed from outside the class. Inherited classes can also access this.
+- Private: Can't be accessed from outside the class. But inherited classes can't access this.
+- Protected: Can't be accessed from outside the class. But inherited classes can access this.
+- Default: In C++ and Java, by default they are set to private.
+
+## Overloading
+It enables multiple methods to have the same name but different parameters(no of parameters, or type of parameters, or both). It is a type of **static polymorphism**. Additionally, operators can also be overloaded to redifine the behaviour of certain operators for user-defined types(classes). It is just syntactic sugar, and can be achieved through functions as well. But it makes the code more intuitive and user-friendly. The type of overloading are: 
+- Function Overloading
+- Operator Overloading
+  
 
 
 
