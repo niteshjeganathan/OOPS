@@ -1,3 +1,4 @@
+
 # Object Oriented Programming
 ## OOP
 Revolves around the idea of creating objects that encapsulate data and behaviour. Objects interact with data/other objects through methods. There are 4 principles of OOP: 
@@ -290,17 +291,17 @@ using namespace std;
 
 class Car {
 public: 
-    static int noOfCars;
+    static int noOfCars; //static member data
     Car() {
         noOfCars++;
     }
 };
 
-int Car::noOfCars = 0;
+int Car::noOfCars = 0; //assignment should be done outside the class
 
 int main() {
     Car car1 = Car();
-    cout << Car::noOfCars;
+    cout << Car::noOfCars; //member data accessed through the class, rather than the object, even though it is possible
 }
 ```
 
@@ -312,13 +313,13 @@ using namespace std;
 
 class Math {
 public: 
-    static int add(int a, int b) {
+    static int add(int a, int b) { //static function
         return a + b;
     }
 };
 
 int main() {
-    cout << Math::add(4, 5) << endl;
+    cout << Math::add(4, 5) << endl; //member method accessed through the class, rather than the object, even though it is possible
 }
 ```
 ## Inline Functions
@@ -329,13 +330,79 @@ using namespace std;
 
 class Math {
 public: 
-    inline static int add(int a, int b) {
+    inline static int add(int a, int b) { //suggestion to the compiler, might or might not take it
         return a + b;
     }
 };
 
 int main() {
     cout << Math::add(4, 5) << endl;
+}
+```
+
+## Friend Functions
+It is used to grant a function or another class access to the private and protected parts of the class. Useful when functions or classes need to collaberate with each other, but still maintaining privacy to certain parts when required. 
+
+1. Friend Functions
+When an outside function is granted access to the private and protected parts of a class.
+```c++
+#include <iostream>
+using namespace std;
+
+class Person {
+private:
+    string name;
+public: 
+    Person(string n) {
+        name = n;
+    }
+    
+    friend void greet(Person person); //friend function declaration
+};
+
+void greet(Person person) { //function definition
+    cout << "Hello " + person.name << endl;
+}
+
+int main() {
+    Person person1 = Person("Nitesh");
+    greet(person1); //function isn't part of the class
+}
+```
+
+2. Friend Class
+```c++
+#include <iostream>
+using namespace std;
+
+class Person {
+private:
+    string name;
+public: 
+    Person(string n) {
+        name = n;
+    }
+    
+    friend class Subject; //friend class declaration
+};
+
+class Subject {
+private:
+    string name;
+public:
+    Subject(string n) {
+        name = n;
+    }
+    
+    void announce(Person person) {
+        cout << person.name << " took the subject: " << name << endl; //class has access to the private member data of the other class, not possible through inheritance
+    }
+};
+
+int main() {
+    Person person = Person("Nitesh");
+    Subject subject = Subject("Math");
+    subject.announce(person);
 }
 ```
 
