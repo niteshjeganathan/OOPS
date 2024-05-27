@@ -45,6 +45,17 @@ private:
     int legs;
 
 public:
+    Animal(string n, int l)
+    {
+        name = n;
+        legs = l;
+    }
+
+    ~Animal()
+    {
+        ;
+    }
+
     void makeSound()
     {
         cout << "Animal making sounds..." << endl;
