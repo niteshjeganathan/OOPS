@@ -137,6 +137,43 @@ int main()
     animal1.makeSound("barking");
 }
 ```
+2. Operator Overloading
+```c++
+#include <iostream>
+using namespace std;
+
+class Integer
+{
+private:
+    int n;
+
+public:
+    Integer(int value)
+    {
+        n = value;
+    }
+    void add(Integer i)
+    {
+        cout << n + i.n;
+    }
+
+    Integer operator+(const Integer i)
+    {
+        Integer result = Integer(0);
+        result = n + i.n;
+        return result;
+    }
+};
+
+int main()
+{
+    Integer n1 = Integer(5);
+    Integer n2 = Integer(10);
+
+    n1.add(n2);
+    n1 = n1 + n2;
+}
+```
   
 
 
